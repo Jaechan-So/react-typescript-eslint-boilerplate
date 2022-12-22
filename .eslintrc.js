@@ -3,24 +3,6 @@ module.exports = {
     browser: true,
     es2022: true,
   },
-  parser: '@typescript-eslint/parser',
-  parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-    },
-    project: ['./tsconfig.json']
-  },
-  settings: {
-    'import/resolver': {
-      typescript: {},
-    },
-  },
-  plugins: [
-    'react',
-    'sort-keys-fix',
-    'typescript-sort-keys',
-    '@typescript-eslint',
-  ],
   extends: [
     'airbnb',
     'airbnb-typescript',
@@ -32,6 +14,19 @@ module.exports = {
     'plugin:react-hooks/recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
+  ],
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
+    project: ['./tsconfig.json']
+  },
+  plugins: [
+    'react',
+    'sort-keys-fix',
+    'typescript-sort-keys',
+    '@typescript-eslint',
   ],
   rules: {
     'comma-dangle': ['error', 'always-multiline'],
@@ -85,5 +80,10 @@ module.exports = {
       allowTemplateLiterals: false,
       avoidEscape: true,
     }],
+  },
+  settings: {
+    'import/resolver': {
+      typescript: {},
+    },
   },
 };
